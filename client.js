@@ -11,31 +11,31 @@ function init(bundle, parent, options = {}) {
   });
 
   const panelMain = new Surface(
-    300, /* x-coordinate */
+    800, /* x-coordinate */
     600, /* y-coordinate */
     Surface.SurfaceShape.Flat /* shape */
   );
 
   const panel1 = new Surface(
-    300, /* x-coordinate */
+    800, /* x-coordinate */
     600, /* y-coordinate */
     Surface.SurfaceShape.Flat /* shape */
   );
 
   const panel2 = new Surface(
-    300, /* x-coordinate */
+    800, /* x-coordinate */
     600, /* y-coordinate */
     Surface.SurfaceShape.Flat /* shape */
   );
 
   const panel3 = new Surface(
-    300, /* x-coordinate */
+    800, /* x-coordinate */
     600, /* y-coordinate */
     Surface.SurfaceShape.Flat /* shape */
   );
 
   const panel4 = new Surface(
-    300, /* x-coordinate */
+    800, /* x-coordinate */
     600, /* y-coordinate */
     Surface.SurfaceShape.Flat /* shape */
   );
