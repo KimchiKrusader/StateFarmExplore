@@ -24,6 +24,9 @@ class Panel2 extends React.Component {
           onEnter={() => this.setState({hover: true})}
           onExit={() => this.setState({hover: false})}
           onClick={() => setCurrent(this.props.index)}>
+          <Image style={styles.postButtonPreview} source={{uri: this.props.preview}} />
+          <View style={[styles.postButtonInfo, this.state.hover ? styles.postButtonInfoHover : null]}></View>
+            <View style={styles.postButtonLabel}></View>
           <Text style={styles.textFormatButton}>Learn More</Text>
         </VrButton>
       </View>
@@ -68,7 +71,19 @@ const styles = StyleSheet.create({
    fontSize: 30,
    textAlign: 'center',
    padding: 10,
- }
+ },
+ postButtonInfo: {
+  ...StyleSheet.absoluteFillObject,
+  backgroundColor: 'rgba(0, 0, 0, 0.2)',
+  flexDirection: 'column',
+},
+ postButtonInfoHover: {
+  backgroundColor: 'rgba(255, 225, 225, 0.6)',
+},
+postButtonPreview: {
+  width: '100%',
+  height: 900,
+}
 });
 
 export default Panel2;

@@ -15,6 +15,10 @@ class PanelMain extends React.Component {
           </Text>
         </View>
         <View style={{padding: 15}}>
+        <Image style={styles.postButtonPreview} source={{uri: this.props.preview}} />
+          <View style={[styles.postButtonInfo, this.state.hover ? styles.postButtonInfoHover : null]}></View>
+            <View style={styles.postButtonLabel}></View>
+          <Text style={styles.textFormatButton}>Learn More</Text>
           <Text style={styles.textFormat}>
             To navigate, simply click and drag with your mouse or use a VR headset!
           </Text>
@@ -65,7 +69,19 @@ const styles = StyleSheet.create({
    fontSize: 30,
    textAlign: 'center',
    padding: 10,
- }
+ },
+ postButtonInfo: {
+  ...StyleSheet.absoluteFillObject,
+  backgroundColor: 'rgba(0, 0, 0, 0.2)',
+  flexDirection: 'column',
+},
+ postButtonInfoHover: {
+  backgroundColor: 'rgba(255, 225, 225, 0.6)',
+},
+postButtonPreview: {
+  width: '100%',
+  height: 900,
+}
 });
 
 export default PanelMain;
